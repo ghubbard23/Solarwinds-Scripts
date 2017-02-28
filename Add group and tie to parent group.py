@@ -8,7 +8,7 @@ import csv
 #Login Prompt. Asks for necessary info to hit the API. I haven't tried using the hostname of Solarwinds, only the IP. 
 #Also, domain accounts don't seem to work. Only local accounts. Not sure why.
 print('Login to Solarwinds')
-npm_server = '10.2.2.66'
+npm_server = input('Solarwinds Server IP: ')
 print('Use a local Solarwinds service account for login...')
 username = input('Username: ')
 password = input('Password: ')
