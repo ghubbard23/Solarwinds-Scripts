@@ -8,7 +8,7 @@ import time
 
 def ping():
     #ip of file server
-    ip = "192.168.255.46"
+    ip = "1.1.1.1"
     response = os.system("ping -c 4 " + ip)
     if response == 0:
         print(ip , 'is reachable')
@@ -35,7 +35,7 @@ def getmacaddr():
 
 def is_mount():
     #what the mount point should look like
-    mount_should="//192.168.255.46/AmazonPi"
+    mount_should="//1.1.1.1/ABC123"
     mount_point=subprocess.Popen("df | grep AmazonPi | cut -d\  -f1", stdout=subprocess.PIPE, shell=True)
     mount_output_bytes, err = mount_point.communicate()
     mount_output_string = str(mount_output_bytes, 'utf-8')
